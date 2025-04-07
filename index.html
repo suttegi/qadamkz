@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qadam.kz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="#" class="logo">
+        <h1>Qadam<span>.kz</span></h1>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home">Басты бет</a></li>
+          <li><a href="#students">Студенттер</a></li>
+          <li><a href="#employers">Жұмыс берушілер</a></li>
+          <li><a href="#resources">Ресурстар</a></li>
+          <li><a href="#news">Жаңалықтар</a></li>
+          <li><a href="#support">Көмек</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Search -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Стажировка мен тәжірибе бағдарламаларын іздеңіз</h2>
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="IT, Маркетинг, Қаржы..." />
+          <button id="searchBtn">Іздеу</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="students" class="section">
+      <div class="container">
+        <h2 class="section-title">Студенттерге арналған бағдарламалар</h2>
+        <div id="internshipList" class="card-grid">
+          <div class="card">
+            <div class="card-header">
+              <h3>UI/UX дизайнер</h3>
+              <span class="card-tag paid">Ақылы</span>
+            </div>
+            <p>Дизайн студиясында тәжірибеден өтіп, нақты жобаларда жұмыс істеуге мүмкіндік. Figma, Adobe XD білу міндетті.</p>
+            <div class="card-footer">
+              <span class="card-location">Алматы қ.</span>
+              <button class="apply-btn">Өтініш беру</button>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header">
+              <h3>Frontend әзірлеуші</h3>
+              <span class="card-tag free">Тегін</span>
+            </div>
+            <p>HTML, CSS, JavaScript білетін және React фреймворкімен жұмыс істеуге дайын студенттер үшін бағдарлама.</p>
+            <div class="card-footer">
+              <span class="card-location">Астана қ.</span>
+              <button class="apply-btn">Өтініш беру</button>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header">
+              <h3>Маркетинг маманы</h3>
+              <span class="card-tag remote">Қашықтан</span>
+            </div>
+            <p>Әлеуметтік желілерде жарнама жасау және контент әзірлеу бойынша практикалық тәжірибе.</p>
+            <div class="card-footer">
+              <span class="card-location">Қашықтан</span>
+              <button class="apply-btn">Өтініш беру</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="employers" class="section">
+      <div class="container">
+        <h2 class="section-title">Жұмыс берушілер үшін</h2>
+        <form id="postForm" class="employer-form">
+          <label>Бағдарлама атауы<input type="text" name="title" required /></label>
+          <label>Сипаттама<textarea name="description" rows="4" required></textarea></label>
+          <label>Сала<select name="category">
+            <option>IT</option><option>Маркетинг</option><option>Қаржы</option>
+            <option>Инженерия</option>
+          </select></label>
+          <label>Локация<input type="text" name="location" required /></label>
+          <label>Түрі<select name="type">
+            <option>Тегін</option><option>Ақылы</option><option>Қашықтан</option><option>Офлайн</option>
+          </select></label>
+          <button type="submit">Жариялау</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="resources" class="section">
+      <div class="container">
+        <h2 class="section-title">Кеңестер мен мақалалар</h2>
+        <ul class="resources-list">
+          <li><a href="#">Резюме жазу бойынша 10 кеңес</a></li>
+          <li><a href="#">Сұхбатқа қалай дайындалу керек?</a></li>
+          <li><a href="#">Онлайн курстар мен сертификаттар</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="container">
+        <h2 class="section-title">Жаңалықтар мен оқиғалар</h2>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">20 Мамыр, 2025</span>
+            <span class="news-title">"Жас IT маман" вебинар</span>
+          </li>
+          <li>
+            <span class="news-date">5 Маусым, 2025</span>
+            <span class="news-title">Қаржы аналитикасы семинары</span>
+          </li>
+          <li>
+            <span class="news-date">15 Маусым, 2025</span>
+            <span class="news-title">Маркетинг трендтері тренингі</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="support" class="section">
+      <div class="container">
+        <h2 class="section-title">Жиі қойылатын сұрақтар (FAQ)</h2>
+        <div class="faq">
+          <details>
+            <summary>Қалай өтініш беруге болады?</summary>
+            <p>"Өтініш беру" батырмасын басып, форманы толтырыңыз.</p>
+          </details>
+          <details>
+            <summary>Бағдарлама тегін бе?</summary>
+            <p>Бағдарлама түріне қарай тегін немесе ақылы болуы мүмкін.</p>
+          </details>
+          <details>
+            <summary>Қолдау қызметі қалай жұмыс істейді?</summary>
+            <p>support@qadam.kz электрондық поштасына жазыңыз.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="applyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Өтініш беру</h3>
+      <form id="applyForm" enctype="multipart/form-data">
+        <label>Атыңыз
+          <input type="text" name="name" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" required />
+        </label>
+        <label>Қысқаша хатыңыз
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <label>Резюме (PDF, DOC/DOCX)
+          <input type="file" name="resume" accept=".pdf,.doc,.docx" />
+        </label>
+        <button type="submit">Жіберу</button>
+      </form>
+    </div>
+  </div>
+  
+
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>
