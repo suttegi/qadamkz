@@ -84,3 +84,83 @@ document.getElementById('applyForm').addEventListener('submit', e => {
     e.target.reset();
   });
 });
+
+
+const chatToggle = document.getElementById('chatToggle');
+const chatWidget = document.getElementById('chatWidget');
+const chatMessages = document.getElementById('chatMessages');
+const chatInput = document.getElementById('chatInput');
+const sendBtn = document.getElementById('sendBtn');
+
+chatToggle.addEventListener('click', () => {
+  chatWidget.style.display = chatWidget.style.display === 'flex' ? 'none' : 'flex';
+});
+
+function appendMessage(text, sender) {
+  const msg = document.createElement('div');
+  msg.classList.add('message', sender);
+  const span = document.createElement('span');
+  span.textContent = text;
+  msg.appendChild(span);
+  chatMessages.appendChild(msg);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function botReply(userText) {
+  let reply = 'Кешіріңіз, мен әзірге жауап бере алмаймын.';
+  if (userText.toLowerCase().includes('стажировка')) {
+    reply = 'Сізге қызықты бағдарламалар бөлімін қарауды ұсынамын.';
+  } else if (userText.toLowerCase().includes('қалай')) {
+    reply = '"Көмек" бөлімінен жиі қойылатын сұрақтарға жауап таба аласыз.';
+  }
+  setTimeout(() => appendMessage(reply, 'bot'), 500);
+}
+
+sendBtn.addEventListener('click', () => {
+  const text = chatInput.value.trim();
+  if (!text) return;
+  appendMessage(text, 'user');
+  chatInput.value = '';
+  botReply(text);
+});
+
+chatInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    sendBtn.click();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelector('.slides');
+  const total = slides.children.length;
+  let index = 0;
+
+  function updateSlider() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  document.querySelector('.slider-btn.next').addEventListener('click', () => {
+    index = (index + 1) % total;
+    updateSlider();
+  });
+
+  document.querySelector('.slider-btn.prev').addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    updateSlider();
+  });
+
+  setInterval(() => {
+    index = (index + 1) % total;
+    updateSlider();
+  }, 5000);
+
+  document.querySelectorAll('.review-photo').forEach(img => {
+    const gender = img.dataset.gender;
+    fetch(`https://randomuser.me/api/?gender=${gender}`)
+      .then(res => res.json())
+      .then(data => {
+        img.src = data.results[0].picture.medium;
+      })
+      .catch(err => console.error('Ошибка загрузки фото:', err));
+  });
+});

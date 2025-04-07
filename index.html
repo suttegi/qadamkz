@@ -29,7 +29,6 @@
   </header>
 
   <main>
-    <!-- Hero / Search -->
     <section id="home" class="hero">
       <div class="container">
         <h2>Стажировка мен тәжірибе бағдарламаларын іздеңіз</h2>
@@ -104,14 +103,69 @@
 
     <section id="resources" class="section">
       <div class="container">
-        <h2 class="section-title">Кеңестер мен мақалалар</h2>
-        <ul class="resources-list">
-          <li><a href="#">Резюме жазу бойынша 10 кеңес</a></li>
-          <li><a href="#">Сұхбатқа қалай дайындалу керек?</a></li>
-          <li><a href="#">Онлайн курстар мен сертификаттар</a></li>
-        </ul>
+        <h2 class="section-title">Ресурстар мен ұсыныстар</h2>
+        <div class="resources-list">
+          <h3>HalykBank ұсынады:</h3>
+          <ul>
+            <li><a href="#">Цифрлық қаржы негіздері курсы</a></li>
+            <li><a href="#">Инвестицияға кіріспе вебинары</a></li>
+          </ul>
+          <h3>Zimran ұсынады:</h3>
+          <ul>
+            <li><a href="#">Жас кәсіпкерлік курсы</a></li>
+            <li><a href="#">Бизнес-жоспар жазу семинары</a></li>
+          </ul>
+          <h3>Басқа қазақстандық компаниялар:</h3>
+          <ul>
+            <li><a href="#">Kaspi Bank: Қаржы технологиялары бойынша тренинг</a></li>
+            <li><a href="#">McDonald's: Маркетинг және клиенттермен жұмыс курсы</a></li>
+          </ul>
+        </div>
       </div>
     </section>
+
+    <section id="reviews" class="section">
+      <div class="container">
+        <h2 class="section-title">Студенттердің пікірлері</h2>
+        <div class="slider">
+          <button class="slider-btn prev" aria-label="Алдыңғы пікір">&#10094;</button>
+            <div class="slides">
+              <div class="slide">
+                <img 
+                  class="review-photo" 
+                  data-gender="male" 
+                  alt="Tamirlan Kustanayev" 
+                />
+                <h3>Tamirlan Kustanayev</h3>
+                <p>UI/UX дизайнер стажировкасында жұмыс істеп, нақты жобаларда өз дағдыларымды жетілдірдім. Өте пайдалы тәжірибе!</p>
+                <a href="https://www.linkedin.com/in/tamirlan_kustanayev" target="_blank" class="linkedin-link">LinkedIn профилі</a>
+              </div>
+              <div class="slide">
+                <img 
+                  class="review-photo" 
+                  data-gender="male" 
+                  alt="Нұржан Ермек" 
+                />
+                <h3>Нұржан Ермек</h3>
+                <p>Frontend бағдарламасына қатысып, React‑пен шынайы жоба жасадым. Командамен жұмыс істеу дағдыларым нығайды.</p>
+                <a href="https://www.linkedin.com/in/nurzhan_ermek" target="_blank" class="linkedin-link">LinkedIn профилі</a>
+              </div>
+              <div class="slide">
+                <img 
+                  class="review-photo" 
+                  data-gender="female" 
+                  alt="Салтанат Жақсылық" 
+                />
+                <h3>Салтанат Жақсылық</h3>
+                <p>Маркетинг мамандығы бойынша қашықтан стажировкада әлеуметтік желілерді басқаруды үйрендім. Керемет тренинг!</p>
+                <a href="https://www.linkedin.com/in/saltanat_jaksylyk" target="_blank" class="linkedin-link">LinkedIn профилі</a>
+              </div>
+            </div>
+          <button class="slider-btn next" aria-label="Келесі пікір">&#10095;</button>
+      </div>
+    </section>
+    
+    
 
     <section id="news" class="section">
       <div class="container">
@@ -175,6 +229,43 @@
       </form>
     </div>
   </div>
+
+  <button class="chat-toggle-btn" id="chatToggle">💬</button>
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">Чат-бот</div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot"><span>Сәлем! Сізге қалай көмектесе аламын?</span></div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Хабарлама жазыңыз..." />
+      <button id="sendBtn">Жіберу</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-section">
+        <h3>Сайттың негізін қалаушылар</h3>
+        <ul>
+          <li>Омарова Сара</li>
+          <li>Сабыржан Нұрлыбек</li>
+          <li>Баканбаев Алим</li>
+          <li>Әліпбек Арайлым</li>
+          <li>Кенес Ясмин</li>
+          <li>Есенұлы Ерлан</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Серіктестер</h3>
+        <div class="partners-logos">
+          <img src="https://companieslogo.com/img/orig/KKS.F-9d710a31.png?t=1720244492" alt="Kaspi Bank" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAxDA1WOWjoCXQIVSuU4KOZEfSO9a0oVEbCw&s" alt="Halyk Bank" />
+          <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/k3a90camaepgog5bszts" alt="Zimran" />
+          <img src="https://halaldamu.kz/storage/app/uploads/public/5f7/09d/048/5f709d048001a342707213.png" alt="Bahandi" />
+        </div>
+      </div>
+    </div>
+  </footer>
   
 
 
