@@ -154,13 +154,13 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSlider();
   }, 5000);
 
-  document.querySelectorAll('.review-photo').forEach(img => {
-    const gender = img.dataset.gender;
-    fetch(`https://randomuser.me/api/?gender=${gender}`)
-      .then(res => res.json())
-      .then(data => {
-        img.src = data.results[0].picture.medium;
-      })
-      .catch(err => console.error('Ошибка загрузки фото:', err));
-  });
+  // document.querySelectorAll('.review-photo').forEach(img => {
+  //   const gender = img.dataset.gender;
+  //   fetch(`https://randomuser.me/api/?gender=${gender}`)
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       img.src = data.results[0].picture.medium;
+  //     })
+  //     .catch(err => console.error('Ошибка загрузки фото:', err));
+  // });
 });
